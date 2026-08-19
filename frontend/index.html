@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>La Praia — Authentic Italian Pizza, Bologna</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Lato:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute;overflow:hidden" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="ic-leaf" viewBox="0 0 20 20" width="20" height="20">
+      <path d="M10 1c5 2 7 8 3 15-2 3-4 3-6 0-4-7-2-13 3-15Z"/>
+    </symbol>
+    <symbol id="ic-blob" viewBox="0 0 24 24" width="24" height="24">
+      <path d="M12 2c4.5 0 9.5 2 10.5 7 1 4.5-2.5 8.5-7 9.5-5.5 1.2-11-1-13-5.5-2-4.5 .5-9.5 5-10.5 1-.3 3-.7 4.5-.5Z"/>
+    </symbol>
+    <symbol id="ic-oval" viewBox="0 0 22 14" width="22" height="14">
+      <ellipse cx="11" cy="7" rx="10" ry="6"/>
+    </symbol>
+    <symbol id="ic-ring" viewBox="0 0 20 20" width="20" height="20">
+      <circle cx="10" cy="10" r="7.5" fill="none" stroke="currentColor" stroke-width="4"/>
+    </symbol>
+    <symbol id="ic-speck" viewBox="0 0 8 8" width="8" height="8">
+      <circle cx="4" cy="4" r="3.2"/>
+    </symbol>
+    <symbol id="ic-chunk" viewBox="0 0 16 16" width="16" height="16">
+      <path d="M8 1c3.3 0 7 2 7 6.2S11.3 15 8 15s-7-3-7-7.8S4.7 1 8 1Z"/>
+    </symbol>
+    <symbol id="ic-floret" viewBox="0 0 22 20" width="22" height="20">
+      <circle cx="7" cy="9" r="4.2"/>
+      <circle cx="14" cy="7" r="4.8"/>
+      <circle cx="11" cy="14" r="4.2"/>
+    </symbol>
+    <symbol id="ic-wedge" viewBox="0 0 26 16" width="26" height="16">
+      <path d="M2 14C2 6 11 1 24 2c-2 7-9 13-22 12Z"/>
+    </symbol>
+    <symbol id="pizza-white" viewBox="0 0 400 225" width="400" height="225">
+      <rect width="400" height="225" fill="#f7f1e3"/>
+      <ellipse cx="200" cy="122" rx="148" ry="92" fill="#000" opacity="0.07"/>
+      <circle cx="197" cy="112" r="98" fill="#c9922f"/>
+      <circle cx="197" cy="112" r="88" fill="#f8efd6"/>
+    </symbol>
+    <symbol id="pizza-red" viewBox="0 0 400 225" width="400" height="225">
+      <rect width="400" height="225" fill="#f7f1e3"/>
+      <ellipse cx="200" cy="122" rx="148" ry="92" fill="#000" opacity="0.07"/>
+      <circle cx="197" cy="112" r="98" fill="#c9922f"/>
+      <circle cx="197" cy="112" r="88" fill="#a83a3d"/>
+    </symbol>
+  </defs>
+</svg>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="logo" href="#top">La Praia</a>
+
+    <div class="lang-switch" role="group" aria-label="Language">
+      <button type="button" class="lang-btn" data-lang="it">IT</button>
+      <button type="button" class="lang-btn" data-lang="en">EN</button>
+      <button type="button" class="lang-btn" data-lang="es">ES</button>
+    </div>
+
+    <nav class="main-nav">
+      <input type="checkbox" id="nav-toggle" class="nav-toggle-input">
+      <label for="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </label>
+      <ul class="nav-list">
+        <li><a href="#about" data-i18n="nav.about">About</a></li>
+        <li><a href="#menu" data-i18n="nav.menu">Menu</a></li>
+        <li><a href="#signature" data-i18n="nav.signature">Signature Pizzas</a></li>
+        <li><a href="#gallery" data-i18n="nav.gallery">Gallery</a></li>
+        <li><a href="#reviews" data-i18n="nav.reviews">Reviews</a></li>
+        <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+        <li><a href="#reservation" class="nav-cta" data-i18n="nav.book">Book a Table</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="container hero-inner hero-animate">
+      <p class="eyebrow">Ristorante Pizzeria · Bologna</p>
+      <h1 data-i18n="hero.h1">Authentic Italian Taste</h1>
+      <p class="hero-subtitle" data-i18n="hero.subtitle">
+        Wood-fired pizza crafted the traditional way on the Bologna coastline
+        of flavor — fresh ingredients, family recipes, and a warm welcome for
+        every table.
+      </p>
+      <div class="hero-actions">
+        <a href="#menu" class="btn btn-primary" data-i18n="hero.order">Order Now</a>
+        <a href="#reservation" class="btn btn-outline" data-i18n="nav.book">Book a Table</a>
+      </div>
+      <p class="hero-trust"><span class="stars">★★★★★</span>4.2 · <span data-i18n="about.stat1">1,227 Google reviews</span></p>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <div class="container about-inner">
+      <div class="about-text reveal">
+        <p class="eyebrow" data-i18n="about.eyebrow">About Us</p>
+        <h2 data-i18n="about.h2">Our Story</h2>
+        <p data-i18n="about.p">
+          La Praia opened its doors in Bologna with one simple goal: bring
+          the taste of authentic Italian coastal pizza to every table. Our
+          dough proofs for 48 hours, our tomatoes come from local growers,
+          and our oven never stops burning wood. Whether you're dining in,
+          taking away, or having it delivered, every pizza is made to order
+          — no shortcuts, no compromises.
+        </p>
+        <div class="about-stats">
+          <div class="stat">
+            <span class="stat-number">4.2★</span>
+            <span class="stat-label" data-i18n="about.stat1">1,227 Google reviews</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">48h</span>
+            <span class="stat-label" data-i18n="about.stat2">Slow-proofed dough</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">100%</span>
+            <span class="stat-label" data-i18n="about.stat3">Wood-fired oven</span>
+          </div>
+        </div>
+      </div>
+      <div class="about-image reveal" role="img" aria-label="Wood-fired oven at La Praia"></div>
+    </div>
+  </section>
+
+  <section id="signature" class="signature">
+    <div class="container">
+      <p class="eyebrow center" data-i18n="signature.eyebrow">Chef's Selection</p>
+      <h2 class="center" data-i18n="signature.h2">Signature Pizzas</h2>
+      <p class="section-subtitle" data-i18n="signature.subtitle">The three pizzas our guests order again and again.</p>
+
+      <div class="signature-grid">
+
+        <article class="signature-card reveal">
+          <svg class="signature-card-image" viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+            <use href="#pizza-white"/>
+            <use href="#ic-blob" fill="#fffaf0" opacity="0.5" transform="translate(153,78)"/>
+            <use href="#ic-blob" fill="#fffaf0" opacity="0.5" transform="translate(218,68)"/>
+            <use href="#ic-blob" fill="#fffaf0" opacity="0.5" transform="translate(138,123)"/>
+            <use href="#ic-blob" fill="#fffaf0" opacity="0.5" transform="translate(223,128)"/>
+            <use href="#ic-blob" fill="#fffaf0" opacity="0.5" transform="translate(185,103)"/>
+            <use href="#ic-blob" fill="#f0dfa8" transform="translate(185,53)"/>
+            <use href="#ic-blob" fill="#f0dfa8" transform="translate(213,148)"/>
+            <use href="#ic-blob" fill="#f0dfa8" transform="translate(123,78)"/>
+            <use href="#ic-leaf" fill="#33593f" transform="translate(240,90) rotate(10,10,10)"/>
+            <use href="#ic-leaf" fill="#33593f" transform="translate(160,160) rotate(-20,10,10)"/>
+            <use href="#ic-leaf" fill="#33593f" transform="translate(130,140) rotate(40,10,10)"/>
+            <use href="#ic-leaf" fill="#33593f" transform="translate(190,130) rotate(-45,10,10)"/>
+            <use href="#ic-leaf" fill="#33593f" transform="translate(185,80) rotate(70,10,10)"/>
+          </svg>
+          <div class="signature-card-body">
+            <span class="signature-badge" data-i18n="signature.badge1">House Specialty</span>
+            <div class="menu-card-heading">
+              <h3>Praia</h3>
+              <span class="price">€7,00</span>
+            </div>
+            <p data-i18n="signature.desc1">The pizza that carries our name — mozzarella, gorgonzola and friarielli, bold and unmistakably ours.</p>
+          </div>
+        </article>
+
+        <article class="signature-card reveal">
+          <svg class="signature-card-image" viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+            <use href="#pizza-red"/>
+            <use href="#ic-blob" fill="#fffaf0" opacity="0.5" transform="translate(153,78)"/>
+            <use href="#ic-blob" fill="#fffaf0" opacity="0.5" transform="translate(218,68)"/>
+            <use href="#ic-blob" fill="#fffaf0" opacity="0.5" transform="translate(138,123)"/>
+            <use href="#ic-blob" fill="#fffaf0" opacity="0.5" transform="translate(223,128)"/>
+            <use href="#ic-blob" fill="#fffaf0" opacity="0.5" transform="translate(185,103)"/>
+            <use href="#ic-oval" fill="#e79ba3" transform="translate(186,58)"/>
+            <use href="#ic-oval" fill="#e79ba3" transform="translate(159,163)"/>
+            <use href="#ic-oval" fill="#e79ba3" transform="translate(124,83)"/>
+            <use href="#ic-oval" fill="#e79ba3" transform="translate(184,83)"/>
+            <use href="#ic-ring" style="color:#d1a75c" transform="translate(240,90)"/>
+            <use href="#ic-ring" style="color:#d1a75c" transform="translate(215,150)"/>
+            <use href="#ic-ring" style="color:#d1a75c" transform="translate(129,143)"/>
+            <use href="#ic-ring" style="color:#d1a75c" transform="translate(189,130)"/>
+          </svg>
+          <div class="signature-card-body">
+            <span class="signature-badge" data-i18n="signature.badge2">Coastal Classic</span>
+            <div class="menu-card-heading">
+              <h3>Amalfi</h3>
+              <span class="price">€8,50</span>
+            </div>
+            <p data-i18n="signature.desc2">Cooked ham and crispy fried calamari over tomato and mozzarella — a taste of the coast.</p>
+          </div>
+        </article>
+
+        <article class="signature-card reveal">
+          <svg class="signature-card-image" viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+            <use href="#pizza-red"/>
+            <use href="#ic-blob" fill="#fffaf0" opacity="0.5" transform="translate(153,78)"/>
+            <use href="#ic-blob" fill="#fffaf0" opacity="0.5" transform="translate(218,68)"/>
+            <use href="#ic-blob" fill="#fffaf0" opacity="0.5" transform="translate(138,123)"/>
+            <use href="#ic-blob" fill="#fffaf0" opacity="0.5" transform="translate(223,128)"/>
+            <use href="#ic-blob" fill="#fffaf0" opacity="0.5" transform="translate(185,103)"/>
+            <use href="#ic-wedge" fill="#f2e7bd" transform="translate(184,57) rotate(0,13,8)"/>
+            <use href="#ic-wedge" fill="#f2e7bd" transform="translate(127,142) rotate(160,13,8)"/>
+            <use href="#ic-blob" fill="#f0dfa8" transform="translate(213,148)"/>
+            <use href="#ic-blob" fill="#f0dfa8" transform="translate(188,128)"/>
+            <use href="#ic-leaf" fill="#7c2a4a" transform="translate(240,90) rotate(15,10,10)"/>
+            <use href="#ic-leaf" fill="#7c2a4a" transform="translate(160,160) rotate(-30,10,10)"/>
+            <use href="#ic-leaf" fill="#7c2a4a" transform="translate(125,80) rotate(60,10,10)"/>
+            <use href="#ic-leaf" fill="#7c2a4a" transform="translate(185,80) rotate(-60,10,10)"/>
+          </svg>
+          <div class="signature-card-body">
+            <span class="signature-badge" data-i18n="signature.badge3">Guest Favorite</span>
+            <div class="menu-card-heading">
+              <h3>Atrani</h3>
+              <span class="price">€7,00</span>
+            </div>
+            <p data-i18n="signature.desc3">Brie, gorgonzola and radicchio meet in a rich, velvety balance of flavor.</p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="menu" class="menu">
+    <div class="container">
+      <p class="eyebrow center">La Carta</p>
+      <h2 class="center" data-i18n="menu.h2">Our Pizza Menu</h2>
+      <p class="section-subtitle" data-i18n="menu.subtitle">A selection from our menu. More items coming soon.</p>
+
+      <div class="menu-grid">
+
+        <article class="menu-card reveal">
+          <svg class="menu-card-image" viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+            <use href="#pizza-white"/>
+            <use href="#ic-blob" fill="#fffaf0" opacity="0.5" transform="translate(153,78)"/>
+            <use href="#ic-blob" fill="#fffaf0" opacity="0.5" transform="translate(218,68)"/>
+            <use href="#ic-blob" fill="#fffaf0" opacity="0.5" transform="translate(138,123)"/>
+            <use href="#ic-blob" fill="#fffaf0" opacity="0.5" transform="translate(223,128)"/>
+            <use href="#ic-blob" fill="#fffaf0" opacity="0.5" transform="translate(185,103)"/>
+            <use href="#ic-blob" fill="#f0dfa8" transform="translate(185,53)"/>
+            <use href="#ic-blob" fill="#f0dfa8" transform="translate(213,148)"/>
+            <use href="#ic-blob" fill="#f0dfa8" transform="translate(123,78)"/>
+            <use href="#ic-leaf" fill="#33593f" transform="translate(240,90) rotate(10,10,10)"/>
+            <use href="#ic-leaf" fill="#33593f" transform="translate(160,160) rotate(-20,10,10)"/>
+            <use href="#ic-leaf" fill="#33593f" transform="translate(130,140) rotate(40,10,10)"/>
+            <use href="#ic-leaf" fill="#33593f" transform="translate(190,130) rotate(-45,10,10)"/>
+            <use href="#ic-leaf" fill="#33593f" transform="translate(185,80) rotate(70,10,10)"/>
+          </svg>
+          <div class="menu-card-body">
+            <div class="menu-card-heading">
+              <h3>Praia</h3>
+              <span class="price">€7,00</span>
+            </div>
+            <p data-i18n="menu.praia">Mozzarella, gorgonzola, friarielli. Our house specialty.</p>
+          </div>
+        </article>
+
+        <article class="menu-card reveal">
+          <svg class="menu-card-image" viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+            <use href="#pizza-red"/>
+            <use href="#ic-blob" fill="#fffaf0" opacity="0.5" transform="translate(153,78)"/>
+            <use href="#ic-blob" fill="#fffaf0" opacity="0.5" transform="translate(218,68)"/>
+            <use href="#ic-blob" fill="#fffaf0" opacity="0.5" transform="translate(138,123)"/>
+            <use href="#ic-blob" fill="#fffaf0" opacity="0.5" transform="translate(223,128)"/>
+            <use href="#ic-blob" fill="#fffaf0" opacity="0.5" transform="translate(185,103)"/>
+            <use href="#ic-oval" fill="#e79ba3" transform="translate(186,58)"/>
+            <use href="#ic-oval" fill="#e79ba3" transform="translate(159,163)"/>
+            <use href="#ic-oval" fill="#e79ba3" transform="translate(124,83)"/>
+            <use href="#ic-oval" fill="#e79ba3" transform="translate(184,83)"/>
+            <use href="#ic-ring" style="color:#d1a75c" transform="translate(240,90)"/>
+            <use href="#ic-ring" style="color:#d1a75c" transform="translate(215,150)"/>
+            <use href="#ic-ring" style="color:#d1a75c" transform="translate(129,143)"/>
+            <use href="#ic-ring" style="color:#d1a75c" transform="translate(189,130)"/>
+          </svg>
+          <div class="menu-card-body">
+            <div class="menu-card-heading">
+              <h3>Amalfi</h3>
+              <span class="price">€8,50</span>
+            </div>
+            <p data-i18n="menu.amalfi">Tomato, mozzarella, cooked ham, fried calamari.</p>
+          </div>
+        </article>
+
+        <article class="menu-card reveal">
+          <svg class="menu-card-image" viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+            <use href="#pizza-red"/>
+            <use href="#ic-blob" fill="#fffaf0" opacity="0.5" transform="translate(153,78)"/>
+            <use href="#ic-blob" fill="#fffaf0" opacity="0.5" transform="translate(218,68)"/>
+            <use href="#ic-blob" fill="#fffaf0" opacity="0.5" transform="translate(138,123)"/>
+            <use href="#ic-blob" fill="#fffaf0" opacity="0.5" transform="translate(223,128)"/>
+            <use href="#ic-blob" fill="#fffaf0" opacity="0.5" transform="translate(185,103)"/>
+            <use href="#ic-wedge" fill="#f2e7bd" transform="translate(184,57) rotate(0,13,8)"/>
+            <use href="#ic-wedge" fill="#f2e7bd" transform="translate(127,142) rotate(160,13,8)"/>
+            <use href="#ic-blob" fill="#f0dfa8" transform="translate(213,148)"/>
+            <use href="#ic-blob" fill="#f0dfa8" transform="translate(188,128)"/>
+            <use href="#ic-leaf" fill="#7c2a4a" transform="translate(240,90) rotate(15,10,10)"/>
+            <use href="#ic-leaf" fill="#7c2a4a" transform="translate(160,160) rotate(-30,10,10)"/>
+            <use href="#ic-leaf" fill="#7c2a4a" transform="translate(125,80) rotate(60,10,10)"/>
+            <use href="#ic-leaf" fill="#7c2a4a" transform="translate(185,80) rotate(-60,10,10)"/>
+          </svg>
+          <div class="menu-card-body">
+            <div class="menu-card-heading">
+              <h3>Atrani</h3>
+              <span class="price">€7,00</span>
+            </div>
+            <p data-i18n="menu.atrani">Tomato, mozzarella, brie, gorgonzola, radicchio.</p>
+          </div>
+        </article>
+
+        <article class="menu-card reveal">
+          <svg class="menu-card-image" viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+            <use href="#pizza-red"/>
+            <use href="#ic-blob" fill="#fffaf0" opacity="0.5" transform="translate(153,78)"/>
+            <use href="#ic-blob" fill="#fffaf0" opacity="0.5" transform="translate(218,68)"/>
+            <use href="#ic-blob" fill="#fffaf0" opacity="0.5" transform="translate(138,123)"/>
+            <use href="#ic-blob" fill="#fffaf0" opacity="0.5" transform="translate(223,128)"/>
+            <use href="#ic-blob" fill="#fffaf0" opacity="0.5" transform="translate(185,103)"/>
+            <use href="#ic-floret" fill="#3c6b46" transform="translate(186,55)"/>
+            <use href="#ic-floret" fill="#3c6b46" transform="translate(159,160)"/>
+            <use href="#ic-floret" fill="#3c6b46" transform="translate(189,130)"/>
+            <use href="#ic-oval" fill="#a8592c" transform="translate(239,93)"/>
+            <use href="#ic-oval" fill="#a8592c" transform="translate(214,153)"/>
+            <use href="#ic-oval" fill="#a8592c" transform="translate(129,143)"/>
+            <use href="#ic-oval" fill="#a8592c" transform="translate(124,83)"/>
+            <use href="#ic-oval" fill="#a8592c" transform="translate(184,83)"/>
+          </svg>
+          <div class="menu-card-body">
+            <div class="menu-card-heading">
+              <h3>Maiori</h3>
+              <span class="price">€7,00</span>
+            </div>
+            <p data-i18n="menu.maiori">Tomato, mozzarella, broccoli, salsiccia.</p>
+          </div>
+        </article>
+
+        <article class="menu-card reveal">
+          <svg class="menu-card-image" viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+            <use href="#pizza-red"/>
+            <use href="#ic-blob" fill="#fffaf0" opacity="0.5" transform="translate(153,78)"/>
+            <use href="#ic-blob" fill="#fffaf0" opacity="0.5" transform="translate(218,68)"/>
+            <use href="#ic-blob" fill="#fffaf0" opacity="0.5" transform="translate(138,123)"/>
+            <use href="#ic-blob" fill="#fffaf0" opacity="0.5" transform="translate(223,128)"/>
+            <use href="#ic-blob" fill="#fffaf0" opacity="0.5" transform="translate(185,103)"/>
+            <use href="#ic-oval" fill="#a8592c" transform="translate(186,58)"/>
+            <use href="#ic-oval" fill="#a8592c" transform="translate(214,153)"/>
+            <use href="#ic-oval" fill="#a8592c" transform="translate(129,143)"/>
+            <use href="#ic-leaf" fill="#33593f" transform="translate(240,90) rotate(5,10,10)"/>
+            <use href="#ic-leaf" fill="#33593f" transform="translate(160,160) rotate(-25,10,10)"/>
+            <use href="#ic-leaf" fill="#33593f" transform="translate(125,80) rotate(50,10,10)"/>
+            <use href="#ic-leaf" fill="#33593f" transform="translate(190,130) rotate(-70,10,10)"/>
+            <use href="#ic-leaf" fill="#33593f" transform="translate(185,80) rotate(30,10,10)"/>
+          </svg>
+          <div class="menu-card-body">
+            <div class="menu-card-heading">
+              <h3>Tramonti</h3>
+              <span class="price">€7,00</span>
+            </div>
+            <p data-i18n="menu.tramonti">Tomato, mozzarella, salsiccia, friarielli.</p>
+          </div>
+        </article>
+
+        <article class="menu-card reveal">
+          <svg class="menu-card-image" viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+            <use href="#pizza-white"/>
+            <use href="#ic-blob" fill="#fffaf0" opacity="0.5" transform="translate(153,78)"/>
+            <use href="#ic-blob" fill="#fffaf0" opacity="0.5" transform="translate(218,68)"/>
+            <use href="#ic-blob" fill="#fffaf0" opacity="0.5" transform="translate(138,123)"/>
+            <use href="#ic-blob" fill="#fffaf0" opacity="0.5" transform="translate(223,128)"/>
+            <use href="#ic-blob" fill="#fffaf0" opacity="0.5" transform="translate(185,103)"/>
+            <use href="#ic-blob" fill="#d9a95c" transform="translate(185,53)"/>
+            <use href="#ic-blob" fill="#d9a95c" transform="translate(213,148)"/>
+            <use href="#ic-blob" fill="#d9a95c" transform="translate(128,138)"/>
+            <use href="#ic-blob" fill="#d9a95c" transform="translate(188,128)"/>
+            <use href="#ic-leaf" fill="#33593f" transform="translate(240,90) rotate(20,10,10)"/>
+            <use href="#ic-leaf" fill="#33593f" transform="translate(160,160) rotate(-40,10,10)"/>
+            <use href="#ic-leaf" fill="#33593f" transform="translate(125,80) rotate(80,10,10)"/>
+            <use href="#ic-leaf" fill="#33593f" transform="translate(185,80) rotate(-15,10,10)"/>
+          </svg>
+          <div class="menu-card-body">
+            <div class="menu-card-heading">
+              <h3>Ravello</h3>
+              <span class="price">€7,00</span>
+            </div>
+            <p data-i18n="menu.ravello">Mozzarella, scamorza, friarielli.</p>
+          </div>
+        </article>
+
+        <article class="menu-card reveal">
+          <svg class="menu-card-image" viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+            <use href="#pizza-red"/>
+            <use href="#ic-blob" fill="#fffaf0" opacity="0.5" transform="translate(153,78)"/>
+            <use href="#ic-blob" fill="#fffaf0" opacity="0.5" transform="translate(218,68)"/>
+            <use href="#ic-blob" fill="#fffaf0" opacity="0.5" transform="translate(138,123)"/>
+            <use href="#ic-blob" fill="#fffaf0" opacity="0.5" transform="translate(223,128)"/>
+            <use href="#ic-blob" fill="#fffaf0" opacity="0.5" transform="translate(185,103)"/>
+            <use href="#ic-oval" fill="#c14c56" transform="translate(186,58)"/>
+            <use href="#ic-oval" fill="#c14c56" transform="translate(214,153)"/>
+            <use href="#ic-oval" fill="#c14c56" transform="translate(129,143)"/>
+            <use href="#ic-oval" fill="#c14c56" transform="translate(189,133)"/>
+            <use href="#ic-chunk" fill="#dd9f37" transform="translate(242,92)"/>
+            <use href="#ic-chunk" fill="#dd9f37" transform="translate(162,162)"/>
+            <use href="#ic-chunk" fill="#dd9f37" transform="translate(127,82)"/>
+            <use href="#ic-chunk" fill="#dd9f37" transform="translate(187,82)"/>
+          </svg>
+          <div class="menu-card-body">
+            <div class="menu-card-heading">
+              <h3>Positano</h3>
+              <span class="price">€6,50</span>
+            </div>
+            <p data-i18n="menu.positano">Tomato, mozzarella, wurstel, fried potatoes.</p>
+          </div>
+        </article>
+
+        <article class="menu-card reveal">
+          <svg class="menu-card-image" viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+            <use href="#pizza-red"/>
+            <use href="#ic-blob" fill="#fffaf0" opacity="0.5" transform="translate(153,78)"/>
+            <use href="#ic-blob" fill="#fffaf0" opacity="0.5" transform="translate(218,68)"/>
+            <use href="#ic-blob" fill="#fffaf0" opacity="0.5" transform="translate(138,123)"/>
+            <use href="#ic-blob" fill="#fffaf0" opacity="0.5" transform="translate(223,128)"/>
+            <use href="#ic-blob" fill="#fffaf0" opacity="0.5" transform="translate(185,103)"/>
+            <use href="#ic-blob" fill="#f0dfa8" transform="translate(185,53)"/>
+            <use href="#ic-blob" fill="#f0dfa8" transform="translate(238,88)"/>
+            <use href="#ic-blob" fill="#f0dfa8" transform="translate(213,148)"/>
+            <use href="#ic-blob" fill="#f0dfa8" transform="translate(158,158)"/>
+            <use href="#ic-blob" fill="#f0dfa8" transform="translate(128,138)"/>
+            <use href="#ic-blob" fill="#f0dfa8" transform="translate(123,78)"/>
+            <use href="#ic-speck" fill="#7c8894" transform="translate(176,96)"/>
+            <use href="#ic-speck" fill="#7c8894" transform="translate(211,121)"/>
+          </svg>
+          <div class="menu-card-body">
+            <div class="menu-card-heading">
+              <h3>Gorgonzola</h3>
+              <span class="price">€6,00</span>
+            </div>
+            <p data-i18n="menu.gorgonzola">Tomato, mozzarella, gorgonzola.</p>
+          </div>
+        </article>
+
+        <article class="menu-card reveal">
+          <svg class="menu-card-image" viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+            <use href="#pizza-red"/>
+            <use href="#ic-blob" fill="#fffaf0" opacity="0.5" transform="translate(153,78)"/>
+            <use href="#ic-blob" fill="#fffaf0" opacity="0.5" transform="translate(218,68)"/>
+            <use href="#ic-blob" fill="#fffaf0" opacity="0.5" transform="translate(138,123)"/>
+            <use href="#ic-blob" fill="#fffaf0" opacity="0.5" transform="translate(223,128)"/>
+            <use href="#ic-blob" fill="#fffaf0" opacity="0.5" transform="translate(185,103)"/>
+            <use href="#ic-chunk" fill="#8f3f47" transform="translate(189,57)"/>
+            <use href="#ic-chunk" fill="#8f3f47" transform="translate(242,92)"/>
+            <use href="#ic-chunk" fill="#8f3f47" transform="translate(217,152)"/>
+            <use href="#ic-chunk" fill="#8f3f47" transform="translate(162,162)"/>
+            <use href="#ic-chunk" fill="#8f3f47" transform="translate(132,142)"/>
+            <use href="#ic-chunk" fill="#8f3f47" transform="translate(127,82)"/>
+            <use href="#ic-chunk" fill="#8f3f47" transform="translate(192,132)"/>
+            <use href="#ic-chunk" fill="#8f3f47" transform="translate(187,82)"/>
+          </svg>
+          <div class="menu-card-body">
+            <div class="menu-card-heading">
+              <h3>Tonno</h3>
+              <span class="price">€5,00</span>
+            </div>
+            <p data-i18n="menu.tonno">Tomato, mozzarella, tuna.</p>
+          </div>
+        </article>
+
+        <article class="menu-card reveal">
+          <svg class="menu-card-image" viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+            <use href="#pizza-white"/>
+            <use href="#ic-blob" fill="#fffaf0" opacity="0.5" transform="translate(153,78)"/>
+            <use href="#ic-blob" fill="#fffaf0" opacity="0.5" transform="translate(218,68)"/>
+            <use href="#ic-blob" fill="#fffaf0" opacity="0.5" transform="translate(138,123)"/>
+            <use href="#ic-blob" fill="#fffaf0" opacity="0.5" transform="translate(223,128)"/>
+            <use href="#ic-blob" fill="#fffaf0" opacity="0.5" transform="translate(185,103)"/>
+            <use href="#ic-speck" fill="#ecd68f" transform="translate(161,86)"/>
+            <use href="#ic-speck" fill="#ecd68f" transform="translate(226,76)"/>
+            <use href="#ic-speck" fill="#ecd68f" transform="translate(146,131)"/>
+            <use href="#ic-speck" fill="#ecd68f" transform="translate(231,136)"/>
+            <use href="#ic-speck" fill="#ecd68f" transform="translate(193,111)"/>
+            <use href="#ic-speck" fill="#ecd68f" transform="translate(193,61)"/>
+            <use href="#ic-speck" fill="#ecd68f" transform="translate(246,96)"/>
+            <use href="#ic-speck" fill="#ecd68f" transform="translate(221,156)"/>
+            <use href="#ic-speck" fill="#ecd68f" transform="translate(166,166)"/>
+            <use href="#ic-speck" fill="#ecd68f" transform="translate(136,146)"/>
+            <use href="#ic-speck" fill="#ecd68f" transform="translate(131,86)"/>
+            <use href="#ic-speck" fill="#ecd68f" transform="translate(196,136)"/>
+            <use href="#ic-speck" fill="#ecd68f" transform="translate(191,86)"/>
+          </svg>
+          <div class="menu-card-body">
+            <div class="menu-card-heading">
+              <h3>Ischia</h3>
+              <span class="price">€4,50</span>
+            </div>
+            <p data-i18n="menu.ischia">Mozzarella, grana.</p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery" class="gallery">
+    <div class="container">
+      <p class="eyebrow center" data-i18n="gallery.eyebrow">A Look Inside</p>
+      <h2 class="center" data-i18n="gallery.h2">Gallery</h2>
+      <p class="section-subtitle" data-i18n="gallery.subtitle">Photography coming soon — this section will host real shots of the kitchen, dishes, and dining room.</p>
+
+      <div class="gallery-grid">
+        <div class="gallery-item gallery-item-tall reveal" role="img" aria-label="Wood-fired oven"></div>
+        <div class="gallery-item reveal" role="img" aria-label="Fresh dough being stretched"></div>
+        <div class="gallery-item reveal" role="img" aria-label="Praia signature pizza"></div>
+        <div class="gallery-item gallery-item-photo reveal">
+          <img src="assets/gallery-dining-room.jpg" alt="Dining room interior at La Praia" loading="lazy">
+        </div>
+        <div class="gallery-item gallery-item-tall reveal" role="img" aria-label="Fresh ingredients on the counter"></div>
+        <div class="gallery-item reveal" role="img" aria-label="Chef at work"></div>
+        <div class="gallery-item reveal" role="img" aria-label="Outdoor seating"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="reviews" class="reviews">
+    <div class="container">
+      <p class="eyebrow center" data-i18n="reviews.eyebrow">Word of Mouth</p>
+      <h2 class="center" data-i18n="reviews.h2">What Our Guests Say</h2>
+      <p class="section-subtitle" data-i18n="reviews.subtitle">4.2★ average from 1,227 Google reviews.</p>
+      <p class="reviews-note" data-i18n="reviews.note">Reviews are shown in their original language.</p>
+
+      <div class="reviews-grid">
+
+        <blockquote class="review-card reveal">
+          <p>“La Praia Ristorante in Bologna is a great place to go for fresh, delicious seafood and pizza. The salad was a great way to start the meal, and the olive oil and balsamic vinegar of Modena were the perfect complement.”</p>
+          <footer>— Sergio Musetti, Local Guide</footer>
+        </blockquote>
+
+        <blockquote class="review-card reveal">
+          <p>“Great food for a great price, cannot fault the service either.”</p>
+          <footer>— Verified Diner, Google Reviews</footer>
+        </blockquote>
+
+        <blockquote class="review-card reveal">
+          <p>“Good pastas and ravioli 😊 We enjoyed our food.”</p>
+          <footer>— Victoria, Local Guide</footer>
+        </blockquote>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="reservation" class="reservation">
+    <div class="container reservation-inner">
+      <div class="reservation-text reveal">
+        <p class="eyebrow" data-i18n="reservation.eyebrow">Reservations</p>
+        <h2 data-i18n="nav.book">Book a Table</h2>
+        <p data-i18n="reservation.p">
+          Join us for lunch or dinner — reservations are recommended,
+          especially on weekends. Fill in your details and our team will
+          confirm your table.
+        </p>
+      </div>
+      <form class="reservation-form reveal">
+        <div class="form-row">
+          <label>
+            <span data-i18n="form.fullName">Full Name</span>
+            <input type="text" name="name" placeholder="Your name" data-i18n-placeholder="form.namePlaceholder" required>
+          </label>
+          <label>
+            <span data-i18n="form.phone">Phone</span>
+            <input type="tel" name="phone" placeholder="+39 ..." required>
+          </label>
+        </div>
+        <div class="form-row">
+          <label>
+            <span data-i18n="form.date">Date</span>
+            <input type="date" name="date" required>
+          </label>
+          <label>
+            <span data-i18n="form.time">Time</span>
+            <input type="time" name="time" required>
+          </label>
+          <label>
+            <span data-i18n="form.guests">Guests</span>
+            <select name="guests" required>
+              <option value="" data-i18n="form.select">Select</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>6+</option>
+            </select>
+          </label>
+        </div>
+        <label>
+          <span data-i18n="form.notes">Special Requests</span>
+          <textarea name="notes" rows="3" placeholder="Allergies, occasions, seating preference..." data-i18n-placeholder="form.notesPlaceholder"></textarea>
+        </label>
+        <button type="submit" class="btn btn-primary" data-i18n="nav.book">Book a Table</button>
+      </form>
+    </div>
+  </section>
+
+  <section id="contact" class="hours-location">
+    <div class="container hours-inner">
+      <div class="hours-block reveal">
+        <p class="eyebrow" data-i18n="contact.eyebrow">Contact &amp; Hours</p>
+        <h2 data-i18n="contact.hoursH2">Opening Hours</h2>
+        <ul class="hours-list">
+          <li><span data-i18n="contact.day1">Monday</span><span>12:00 – 14:30</span></li>
+          <li><span data-i18n="contact.day2">Tuesday – Saturday</span><span>12:00 – 14:30, 19:00 – 23:00</span></li>
+          <li><span data-i18n="contact.day3">Sunday</span><span>19:00 – 23:00</span></li>
+        </ul>
+      </div>
+      <div class="location-block reveal">
+        <h2 data-i18n="contact.findUs">Find Us</h2>
+        <address>
+          Via Camillo Casarini, 10<br>
+          40131 Bologna BO, Italy
+        </address>
+        <p><a href="tel:+39051558927">+39 051 558927</a></p>
+        <a class="btn btn-outline btn-small" href="https://www.google.com/maps/place/La+Praia/@44.503578,11.3319285,775m/data=!3m1!1e3!4m7!3m6!1s0x477fd485aca473f7:0x5929c99a8e592c67!8m2!3d44.503578!4d11.3319285!10e9!16s%2Fg%2F1tcvy7xt!18m1!1e1" target="_blank" rel="noopener" data-i18n="contact.directions">Get Directions</a>
+        <div class="map-placeholder" role="img" aria-label="Map showing La Praia location"></div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer id="footer" class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <span class="logo">La Praia</span>
+      <p data-i18n="footer.tagline">Ristorante Pizzeria — Bologna, Italy</p>
+    </div>
+    <div class="footer-links">
+      <a href="#about" data-i18n="nav.about">About</a>
+      <a href="#menu" data-i18n="nav.menu">Menu</a>
+      <a href="#gallery" data-i18n="nav.gallery">Gallery</a>
+      <a href="#reviews" data-i18n="nav.reviews">Reviews</a>
+      <a href="#contact" data-i18n="nav.contact">Contact</a>
+    </div>
+    <div class="footer-social">
+      <a href="https://www.facebook.com/lapraia.ristorantepizzeria?sk=wall" target="_blank" rel="noopener" aria-label="La Praia on Facebook">Facebook</a>
+      <a href="#" aria-label="La Praia on Instagram">Instagram</a>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <p data-i18n="footer.copyright">&copy; 2026 La Praia. All rights reserved.</p>
+  </div>
+</footer>
+
+<div class="mobile-cta-bar">
+  <a href="#menu" class="btn btn-primary" data-i18n="hero.order">Order Now</a>
+  <a href="#reservation" class="btn btn-outline" data-i18n="nav.book">Book a Table</a>
+</div>
+
+<div class="chat-widget">
+  <div class="chat-window" id="chat-window" hidden>
+    <div class="chat-header">
+      <span class="chat-header-title">CafeBot</span>
+      <button type="button" class="chat-close" id="chat-close" aria-label="Close chat">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="5" y1="5" x2="19" y2="19"></line><line x1="19" y1="5" x2="5" y2="19"></line></svg>
+      </button>
+    </div>
+    <div class="chat-messages" id="chat-messages">
+      <p class="chat-empty" id="chat-empty">Send a message to get started.</p>
+    </div>
+    <form class="chat-input-row" id="chat-form">
+      <input type="text" id="chat-input" placeholder="Type a message..." autocomplete="off" aria-label="Type a message" required>
+      <button type="submit" class="chat-send" aria-label="Send message">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+      </button>
+    </form>
+  </div>
+
+  <button type="button" class="chat-toggle" id="chat-toggle" aria-label="Open chat" aria-expanded="false" aria-controls="chat-window">
+    <svg class="chat-toggle-icon-open" viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+    <svg class="chat-toggle-icon-close" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="5" y1="5" x2="19" y2="19"></line><line x1="19" y1="5" x2="5" y2="19"></line></svg>
+  </button>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
