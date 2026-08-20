@@ -298,7 +298,9 @@
 
   if (!toggle || !win || !form || !input || !messages) return;
 
-  var MOCK_REPLY = "Hi! I'm CafeBot. My AI brain isn't connected yet.";
+  var ERROR_REPLY = "Sorry, something went wrong on our end. Please try again in a moment.";
+  var conversationHistory = [];
+  var sendBtn = form.querySelector("button[type=submit]");
 
   function addBubble(text, sender) {
     if (emptyState) {
@@ -353,9 +355,31 @@
 
     addBubble(text, "user");
     input.value = "";
+    input.disabled = true;
+    if (sendBtn) sendBtn.disabled = true;
 
-    setTimeout(function () {
-      addBubble(MOCK_REPLY, "bot");
-    }, 500);
+    fetch("/api/chat", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ message: text, conversationHistory: conversationHistory }),
+    })
+      .then(function (res) {
+        if (!res.ok) throw new Error("Request failed");
+        return res.json();
+      })
+      .then(function (data) {
+        conversationHistory = data.conversationHistory || conversationHistory;
+        conversationHistory.push({ role: "user", content: text });
+        conversationHistory.push({ role: "assistant", content: data.reply });
+        addBubble(data.reply, "bot");
+      })
+      .catch(function () {
+        addBubble(ERROR_REPLY, "bot");
+      })
+      .finally(function () {
+        input.disabled = false;
+        if (sendBtn) sendBtn.disabled = false;
+        input.focus();
+      });
   });
 })();
