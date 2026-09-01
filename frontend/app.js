@@ -40,7 +40,7 @@
       "menu.ischia": "Mozzarella, grana.",
       "gallery.eyebrow": "A Look Inside",
       "gallery.h2": "Gallery",
-      "gallery.subtitle": "Photography coming soon — this section will host real shots of the kitchen, dishes, and dining room.",
+      "gallery.subtitle": "A glimpse of La Praia — our dishes and our dining room.",
       "reviews.eyebrow": "Word of Mouth",
       "reviews.h2": "What Our Guests Say",
       "reviews.subtitle": "4.2★ average from 1,227 Google reviews.",
@@ -106,7 +106,7 @@
       "menu.ischia": "Mozzarella, grana.",
       "gallery.eyebrow": "Uno Sguardo all'Interno",
       "gallery.h2": "Galleria",
-      "gallery.subtitle": "Foto in arrivo — questa sezione ospiterà scatti reali della cucina, dei piatti e della sala.",
+      "gallery.subtitle": "Uno sguardo a La Praia — i nostri piatti e la nostra sala.",
       "reviews.eyebrow": "Il Passaparola",
       "reviews.h2": "Cosa Dicono i Nostri Ospiti",
       "reviews.subtitle": "Media di 4,2★ su 1.227 recensioni Google.",
@@ -172,7 +172,7 @@
       "menu.ischia": "Mozzarella, queso grana.",
       "gallery.eyebrow": "Una Mirada por Dentro",
       "gallery.h2": "Galería",
-      "gallery.subtitle": "Fotos próximamente — esta sección mostrará imágenes reales de la cocina, los platos y el comedor.",
+      "gallery.subtitle": "Un vistazo a La Praia — nuestros platos y nuestro comedor.",
       "reviews.eyebrow": "El Boca a Boca",
       "reviews.h2": "Lo Que Dicen Nuestros Clientes",
       "reviews.subtitle": "Promedio de 4,2★ de 1.227 reseñas de Google.",
@@ -298,7 +298,9 @@
 
   if (!toggle || !win || !form || !input || !messages) return;
 
-  var MOCK_REPLY = "Hi! I'm CafeBot. My AI brain isn't connected yet.";
+  var ERROR_REPLY = "Sorry, something went wrong on our end. Please try again in a moment.";
+  var conversationHistory = [];
+  var sendBtn = form.querySelector("button[type=submit]");
 
   function addBubble(text, sender) {
     if (emptyState) {
@@ -353,9 +355,31 @@
 
     addBubble(text, "user");
     input.value = "";
+    input.disabled = true;
+    if (sendBtn) sendBtn.disabled = true;
 
-    setTimeout(function () {
-      addBubble(MOCK_REPLY, "bot");
-    }, 500);
+    fetch("/api/chat", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ message: text, conversationHistory: conversationHistory }),
+    })
+      .then(function (res) {
+        if (!res.ok) throw new Error("Request failed");
+        return res.json();
+      })
+      .then(function (data) {
+        conversationHistory = data.conversationHistory || conversationHistory;
+        conversationHistory.push({ role: "user", content: text });
+        conversationHistory.push({ role: "assistant", content: data.reply });
+        addBubble(data.reply, "bot");
+      })
+      .catch(function () {
+        addBubble(ERROR_REPLY, "bot");
+      })
+      .finally(function () {
+        input.disabled = false;
+        if (sendBtn) sendBtn.disabled = false;
+        input.focus();
+      });
   });
 })();
